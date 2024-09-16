@@ -9,3 +9,7 @@
 1. Игра: "Проверка на чётность"
 
 [![asciicast](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL.svg)](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL)
+
+2. Игра: «Калькулятор»
+
+[![asciicast](https://asciinema.org/a/u3YpgvS3P2BwCx5kH6bAzZuEk.svg)](https://asciinema.org/a/u3YpgvS3P2BwCx5kH6bAzZuEk)
