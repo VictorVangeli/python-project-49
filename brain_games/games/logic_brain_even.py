@@ -9,7 +9,3 @@ def even_round(username: str) -> bool:
     number = get_random_number()
     correct_answer = 'yes' if is_even(number) else 'no'
     return ask_question(f'{number}', correct_answer, username)
-
-
-def main():
-    play_game(even_round)

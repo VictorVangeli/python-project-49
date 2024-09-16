@@ -19,7 +19,3 @@ def calc_round(username: str) -> bool:
     question = f'{number_one} {operation} {number_two}'
     correct_answer = str(calculate_result(number_one, number_two, operation))
     return ask_question(question, correct_answer, username)
-
-
-def main():
-    play_game(calc_round)
