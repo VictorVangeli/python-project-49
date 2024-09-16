@@ -8,4 +8,4 @@
 
 1. Игра: "Проверка на чётность"
 
-[![asciicast](https://asciinema.org/a/rE4HBriEHvKBeJ7cIRa3QoKv4.svg)](https://asciinema.org/a/rE4HBriEHvKBeJ7cIRa3QoKv4)
+[![asciicast](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL.svg)](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL)

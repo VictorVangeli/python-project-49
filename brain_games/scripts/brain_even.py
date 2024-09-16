@@ -1,24 +1,17 @@
 import random
 
-username = ''
+from brain_games.scripts.cli import welcome_user
 
 
-def welcome_user_be():
-    """
-    Приглашает пользователя ввести свое имя, а затем приветствует его по имени
-    """
-    global username
-    while not username.strip():
-        username = input("May I have your name? ")
-    print(f'Hello, {username}!')
-
-
-def ask_is_even():
+def ask_is_even(username: str):
     """
     Предлагает пользователю ввести 'yes' или 'no' в зависимости от того было предложено четное или нечетное число
 
     Функция генерирует случайное число и просит пользователя указать, является ли оно четным, вводя 'yes' для четных
     чисел и 'no' для нечетных. Пользователю нужно правильно ответить три раза подряд.
+
+    Args:
+        username (str): Имя пользователя.
     """
     counter = 0
     print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -30,8 +23,14 @@ def ask_is_even():
             print('Correct!')
             counter += 1
         else:
-            print(f'Let\'s try again, {username}!')
-            break
+            if answer == 'yes':
+                print(f'\'yes\' is wrong answer ;(. Correct answer was \'no\'\n'
+                      f'Let\'s try again, {username}!')
+                break
+            else:
+                print(f'\'no\' is wrong answer ;(. Correct answer was \'yes\'\n'
+                      f'Let\'s try again, {username}!')
+                break
     if counter == 3:
         print(f'Congratulations, {username}!')
 
@@ -50,8 +49,8 @@ def iseven(numbers: int) -> bool:
 
 
 def main():
-    welcome_user_be()
-    ask_is_even()
+    username = welcome_user()
+    ask_is_even(username)
 
 
 if __name__ == '__main__':
