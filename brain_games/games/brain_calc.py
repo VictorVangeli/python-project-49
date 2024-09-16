@@ -1,0 +1,25 @@
+import random
+
+from brain_games.games.games_logic import ask_question, play_game
+
+
+def calculate_result(number_one: int, number_two: int, operation: str) -> int:
+    if operation == '+':
+        return number_one + number_two
+    elif operation == '-':
+        return number_one - number_two
+    elif operation == '*':
+        return number_one * number_two
+
+
+def calc_round(username: str) -> bool:
+    number_one = random.randint(1, 100)
+    number_two = random.randint(1, 100)
+    operation = random.choice(['+', '-', '*'])
+    question = f'{number_one} {operation} {number_two}'
+    correct_answer = str(calculate_result(number_one, number_two, operation))
+    return ask_question(question, correct_answer, username)
+
+
+def main():
+    play_game(calc_round)
