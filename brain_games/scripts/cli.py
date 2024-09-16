@@ -1,11 +1,12 @@
-import prompt
+
+name = ''
 
 
 def welcome_user():
     """
     Приглашает пользователя ввести свое имя, а затем приветствует его по имени.
     """
-    name = ''
+    global name
     while not name.strip():
-        name = prompt.string("May I have your name? ")
+        name = input("May I have your name? ")
     print(f'Hello, {name}!')
