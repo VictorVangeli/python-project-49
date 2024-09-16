@@ -1,9 +1,23 @@
 import random
 
-from brain_games.games.games_logic import ask_question, play_game, get_random_number
+from brain_games.games.games_logic import ask_question, get_random_number
+
+
+calc_rules = 'What is the result of the expression?'
 
 
 def calculate_result(number_one: int, number_two: int, operation: str) -> int:
+    """
+    Вычисляет результат математической операции между двумя числами.
+
+    Args:
+        number_one (int): Первое число.
+        number_two (int): Второе число.
+        operation (str): Операция, которую нужно выполнить ('+', '-', '*').
+
+    Returns:
+        int: Результат выполнения операции.
+    """
     if operation == '+':
         return number_one + number_two
     elif operation == '-':
@@ -13,6 +27,16 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
 
 
 def calc_round(username: str) -> bool:
+    """
+    Игроку задается случайное арифметическое выражение, и он должен ввести правильный ответ.
+    Если ответ верный, раунд засчитывается как выигранный.
+
+    Args:
+        username (str): Имя пользователя
+
+    Returns:
+        bool: True, если игрок дал правильный ответ, False в случае ошибки.
+    """
     number_one = get_random_number()
     number_two = get_random_number()
     operation = random.choice(['+', '-', '*'])

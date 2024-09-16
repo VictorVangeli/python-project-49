@@ -13,3 +13,7 @@
 2. Игра: «Калькулятор»
 
 [![asciicast](https://asciinema.org/a/u3YpgvS3P2BwCx5kH6bAzZuEk.svg)](https://asciinema.org/a/u3YpgvS3P2BwCx5kH6bAzZuEk)
+
+3. Игра: "Наименьший общий делитель"
+
+[![asciicast](https://asciinema.org/a/wsLkUms6BcS2U30evjp4mJPag.svg)](https://asciinema.org/a/wsLkUms6BcS2U30evjp4mJPag)

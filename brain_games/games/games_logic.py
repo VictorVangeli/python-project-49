@@ -30,17 +30,19 @@ def ask_question(question: str, correct_answer: str, username: str) -> bool:
         return False
 
 
-def play_game(game_round, rounds=3):
+def play_game(game_round, game_rules, rounds=3):
     """
     Логика игры, которая повторяет вопросы, пока пользователь не ответит правильно несколько раз подряд.
 
     Args:
         game_round (Callable): Функция, которая описывает один раунд игры.
+        game_rules (str): Правила игры, которые будут выведены перед началом.
         rounds (int): Количество раундов, которые нужно выиграть подряд.
     """
     counter = 0
     username = input("May I have your name? ")
     print(f'Hello, {username}!')
+    print(game_rules)
 
     while counter < rounds:
         if game_round(username):
