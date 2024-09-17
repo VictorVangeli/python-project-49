@@ -1,6 +1,6 @@
 from brain_games.games.games_logic import get_random_number, ask_question
 
-gcd_rules = 'Find the greatest common divisor of given numbers.'
+GCD_RULES = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd(a: int, b: int) -> int:

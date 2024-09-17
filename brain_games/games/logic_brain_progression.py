@@ -2,7 +2,7 @@ import random
 
 from brain_games.games.games_logic import ask_question
 
-progression_rules = 'What number is missing in the progression?'
+PROGRESSION_RULES = 'What number is missing in the progression?'
 
 
 def progression_round(username: str) -> bool:

@@ -1,6 +1,6 @@
 from brain_games.games.games_logic import get_random_number, ask_question
 
-even_rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+EVEN_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number: int) -> bool:

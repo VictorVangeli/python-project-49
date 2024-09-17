@@ -1,6 +1,6 @@
 from brain_games.games.games_logic import get_random_number, ask_question
 
-prime_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number: int) -> bool:

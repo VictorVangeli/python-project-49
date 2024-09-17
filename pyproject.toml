@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "This is the first final project as part of the learning process at Hexlet. It consists of five mini-games related to mathematics, implemented following the DRY (Don’t Repeat Yourself) principle."
 authors = ["VictorVangeli <whgaleon1@yandex.ru>"]
 readme = "README.md"
 packages = [
