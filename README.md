@@ -6,6 +6,9 @@
 
 ### ASCCIINEMA:
 
+#### FULL-DEMO:
+[![asciicast](https://asciinema.org/a/rdy1ncieOccX6CA35svVxL3YY.svg)](https://asciinema.org/a/rdy1ncieOccX6CA35svVxL3YY)
+
 1. Игра: "Проверка на чётность"
 
 [![asciicast](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL.svg)](https://asciinema.org/a/jKNyxUzBHMq60sBdwi9vNmuNL)
