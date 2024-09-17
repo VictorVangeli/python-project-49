@@ -17,3 +17,7 @@
 3. Игра: "Наименьший общий делитель"
 
 [![asciicast](https://asciinema.org/a/wsLkUms6BcS2U30evjp4mJPag.svg)](https://asciinema.org/a/wsLkUms6BcS2U30evjp4mJPag)
+
+4. Игра «Арифметическая прогрессия»
+
+[![asciicast](https://asciinema.org/a/Ih4rvR9QDnLXmFa1NWHEAsYFY.svg)](https://asciinema.org/a/Ih4rvR9QDnLXmFa1NWHEAsYFY)
