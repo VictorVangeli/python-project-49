@@ -7,7 +7,8 @@
 ### ASCCIINEMA:
 
 #### FULL-DEMO:
-[![asciicast](https://asciinema.org/a/rdy1ncieOccX6CA35svVxL3YY.svg)](https://asciinema.org/a/rdy1ncieOccX6CA35svVxL3YY)
+
+[![asciicast](https://asciinema.org/a/wFoUZDEVLZ2P5YhR27ILJm3Yt.svg)](https://asciinema.org/a/wFoUZDEVLZ2P5YhR27ILJm3Yt)
 
 1. Игра: "Проверка на чётность"
 
