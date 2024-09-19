@@ -7,5 +7,5 @@ def main():
     play_game(gcd_round, GCD_RULES)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

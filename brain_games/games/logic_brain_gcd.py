@@ -1,4 +1,4 @@
-from brain_games.games.games_logic import get_random_number, ask_question
+from brain_games.games.games_logic import ask_question, get_random_number
 
 
 def gcd(a: int, b: int) -> int:
@@ -24,7 +24,8 @@ def gcd_round(username: str) -> bool:
     Игроку предлагается найти наибольший общий делитель двух случайных чисел,
     которые не равны 1, и наименьший общий делитель которых не равен 1.
 
-    Если игрок отвечает правильно, игра продолжается, если нет - игра завершается.
+    Если игрок отвечает правильно, игра продолжается, если нет - игра
+    завершается.
 
     Args:
         username (str): Имя пользователя
@@ -33,9 +34,11 @@ def gcd_round(username: str) -> bool:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
     number_one = number_two = 1
-    while number_one == 1 or number_two == 1 or gcd(number_one, number_two) == 1:
+    while (
+        number_one == 1 or number_two == 1 or gcd(number_one, number_two) == 1
+    ):
         number_one = get_random_number()
         number_two = get_random_number()
-    question = f'{number_one} {number_two}'
+    question = f"{number_one} {number_two}"
     correct_answer = str(gcd(number_one, number_two))
     return ask_question(question, correct_answer, username)

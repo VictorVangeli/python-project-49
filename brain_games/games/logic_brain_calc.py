@@ -15,17 +15,18 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
     Returns:
         int: Результат выполнения операции.
     """
-    if operation == '+':
+    if operation == "+":
         return number_one + number_two
-    elif operation == '-':
+    elif operation == "-":
         return number_one - number_two
-    elif operation == '*':
+    elif operation == "*":
         return number_one * number_two
 
 
 def calc_round(username: str) -> bool:
     """
-    Игроку задается случайное арифметическое выражение, и он должен ввести правильный ответ.
+    Игроку задается случайное арифметическое выражение, и он должен ввести
+    правильный ответ.
     Если ответ верный, раунд засчитывается как выигранный.
 
     Args:
@@ -36,7 +37,7 @@ def calc_round(username: str) -> bool:
     """
     number_one = get_random_number()
     number_two = get_random_number()
-    operation = random.choice(['+', '-', '*'])
-    question = f'{number_one} {operation} {number_two}'
+    operation = random.choice(["+", "-", "*"])
+    question = f"{number_one} {operation} {number_two}"
     correct_answer = str(calculate_result(number_one, number_two, operation))
     return ask_question(question, correct_answer, username)

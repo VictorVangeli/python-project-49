@@ -7,5 +7,5 @@ def main():
     play_game(progression_round, PROGRESSION_RULES)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

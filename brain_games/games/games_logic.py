@@ -1,6 +1,6 @@
 import random
 
-from brain_games.const import GREETING_MESSAGE, ENTER_NAME, ROUNDS
+from brain_games.const import ENTER_NAME, GREETING_MESSAGE, ROUNDS
 
 
 def get_random_number(start=1, end=100) -> int:
@@ -20,21 +20,25 @@ def ask_question(question: str, correct_answer: str, username: str) -> bool:
     Returns:
         bool: True, если ответ правильный, иначе False.
     """
-    print(f'Question: {question}')
+    print(f"Question: {question}")
     answer = input("Your answer: ").strip().lower()
 
     if answer == correct_answer:
-        print('Correct!')
+        print("Correct!")
         return True
     else:
-        print(f'"{answer}" is wrong answer ;(. Correct answer was "{correct_answer}".')
-        print(f'Let\'s try again, {username}!')
+        print(
+            f'"{answer}" is wrong answer ;(. '
+            f'Correct answer was "{correct_answer}".'
+        )
+        print(f"Let's try again, {username}!")
         return False
 
 
 def play_game(game_round, game_rules: str):
     """
-    Логика игры, которая повторяет вопросы, пока пользователь не ответит правильно несколько раз подряд.
+    Логика игры, которая повторяет вопросы, пока пользователь не ответит
+    правильно несколько раз подряд.
 
     Args:
         game_round (Callable): Функция, которая описывает один раунд игры.
@@ -43,7 +47,7 @@ def play_game(game_round, game_rules: str):
     counter = 0
     print(GREETING_MESSAGE)
     username = input(ENTER_NAME)
-    print(f'Hello, {username}!')
+    print(f"Hello, {username}!")
     print(game_rules)
 
     while counter < ROUNDS:
@@ -53,4 +57,4 @@ def play_game(game_round, game_rules: str):
             break
 
     if counter == ROUNDS:
-        print(f'Congratulations, {username}!')
+        print(f"Congratulations, {username}!")

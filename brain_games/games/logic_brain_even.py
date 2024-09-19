@@ -1,4 +1,4 @@
-from brain_games.games.games_logic import get_random_number, ask_question
+from brain_games.games.games_logic import ask_question, get_random_number
 
 
 def is_even(number: int) -> bool:
@@ -16,10 +16,12 @@ def is_even(number: int) -> bool:
 
 def even_round(username: str) -> bool:
     """
-    Проводит один раунд игры, в котором игрок должен угадать, является ли число четным.
+    Проводит один раунд игры, в котором игрок должен угадать, является ли число
+    четным.
 
-    Игроку задается случайное число, и он должен ответить 'yes', если число четное,
-    и 'no', если нечетное. Если игрок отвечает правильно, раунд считается выигранным.
+    Игроку задается случайное число, и он должен ответить 'yes', если число
+    четное, и 'no', если нечетное. Если игрок отвечает правильно, раунд
+    считается выигранным.
 
     Args:
         username (str): Имя пользователя
@@ -28,5 +30,5 @@ def even_round(username: str) -> bool:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
     number = get_random_number()
-    correct_answer = 'yes' if is_even(number) else 'no'
-    return ask_question(f'{number}', correct_answer, username)
+    correct_answer = "yes" if is_even(number) else "no"
+    return ask_question(f"{number}", correct_answer, username)
