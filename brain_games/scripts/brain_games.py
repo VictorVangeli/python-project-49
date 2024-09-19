@@ -1,7 +1,9 @@
+from brain_games.const import GREETING_MESSAGE
 from brain_games.scripts.cli import welcome_user
 
 
 def main():
+    print(GREETING_MESSAGE)
     welcome_user()
 
 
