@@ -3,9 +3,6 @@ import random
 from brain_games.games.games_logic import ask_question, get_random_number
 
 
-CALC_RULES = 'What is the result of the expression?'
-
-
 def calculate_result(number_one: int, number_two: int, operation: str) -> int:
     """
     Вычисляет результат математической операции между двумя числами.
