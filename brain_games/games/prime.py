@@ -1,5 +1,6 @@
 from brain_games.const import PRIME_RULES
-from brain_games.games.engine import ask_question, get_random_number, play_game
+from brain_games.games.engine import ask_question, play_game
+from brain_games.utils import get_random_number
 
 
 def start_prime_game():
