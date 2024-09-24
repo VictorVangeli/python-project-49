@@ -4,7 +4,7 @@ from brain_games.utils import get_random_number
 
 
 def start_prime_game():
-    play_game(prime_round, PRIME_RULES)
+    play_game(run_prime_round, PRIME_RULES)
 
 
 def is_prime(number: int) -> bool:
@@ -28,7 +28,7 @@ def is_prime(number: int) -> bool:
     return True
 
 
-def prime_round(username: str) -> bool:
+def run_prime_round(username: str) -> bool:
     """
     Проводит один раунд игры, в котором игрок должен угадать, является ли число
     простым.

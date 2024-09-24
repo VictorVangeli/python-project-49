@@ -6,7 +6,7 @@ from brain_games.utils import get_random_number
 
 
 def start_calc_game():
-    play_game(calc_round, CALC_RULES)
+    play_game(run_calc_round, CALC_RULES)
 
 
 def calculate_result(number_one: int, number_two: int, operation: str) -> int:
@@ -30,7 +30,7 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
             return number_one * number_two
 
 
-def calc_round(username: str) -> bool:
+def run_calc_round(username: str) -> bool:
     """
     Игроку задается случайное арифметическое выражение, и он должен ввести
     правильный ответ.

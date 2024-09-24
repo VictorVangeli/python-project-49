@@ -4,7 +4,7 @@ from brain_games.utils import get_random_number
 
 
 def start_even_game():
-    play_game(even_round, EVEN_RULES)
+    play_game(run_even_round, EVEN_RULES)
 
 
 def is_even(number: int) -> bool:
@@ -20,7 +20,7 @@ def is_even(number: int) -> bool:
     return number % 2 == 0
 
 
-def even_round(username: str) -> bool:
+def run_even_round(username: str) -> bool:
     """
     Проводит один раунд игры, в котором игрок должен угадать, является ли число
     четным.

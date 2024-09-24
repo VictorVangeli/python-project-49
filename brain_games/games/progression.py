@@ -1,14 +1,13 @@
-
 from brain_games.const import PROGRESSION_RULES
 from brain_games.games.engine import ask_question, play_game
 from brain_games.utils import get_random_number
 
 
 def start_progression_game():
-    play_game(progression_round, PROGRESSION_RULES)
+    play_game(run_progression_round, PROGRESSION_RULES)
 
 
-def progression_round(username: str) -> bool:
+def run_progression_round(username: str) -> bool:
     """
     Генерирует арифметическую прогрессию и скрывает один из ее элементов.
 
