@@ -1,11 +1,8 @@
-from brain_games.const import EVEN_RULES
-from brain_games.games.engine import play_game
-from brain_games.games.even import even_round
+from brain_games.games.even import start_even_game
 
 
 def main():
-    play_game(even_round, EVEN_RULES)
-
+    start_even_game()
 
 if __name__ == "__main__":
     main()
