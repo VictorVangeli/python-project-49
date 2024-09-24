@@ -1,6 +1,11 @@
 import random
 
-from brain_games.games.engine import ask_question, get_random_number
+from brain_games.const import CALC_RULES
+from brain_games.games.engine import ask_question, get_random_number, play_game
+
+
+def start_calc_game():
+    play_game(calc_round, CALC_RULES)
 
 
 def calculate_result(number_one: int, number_two: int, operation: str) -> int:

@@ -1,10 +1,8 @@
-from brain_games.const import CALC_RULES
-from brain_games.games.engine import play_game
-from brain_games.games.calc import calc_round
+from brain_games.games.calc import start_calc_game
 
 
 def main():
-    play_game(calc_round, CALC_RULES)
+    start_calc_game()
 
 
 if __name__ == "__main__":
