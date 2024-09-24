@@ -15,4 +15,4 @@ ENTER_NAME = "May I have your name? "
 
 """Block with constant for game logic"""
 
-ROUNDS = 3
+ROUNDS_NUMBERS = 3

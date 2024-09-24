@@ -1,1 +1,4 @@
 .venv
+.idea
+dist
+_pycache_

@@ -1,6 +1,6 @@
 import random
 
-from brain_games.const import ENTER_NAME, GREETING_MESSAGE, ROUNDS
+from brain_games.const import ENTER_NAME, GREETING_MESSAGE, ROUNDS_NUMBERS
 
 
 def get_random_number(start=1, end=100) -> int:
@@ -50,11 +50,11 @@ def play_game(game_round, game_rules: str):
     print(f"Hello, {username}!")
     print(game_rules)
 
-    while counter < ROUNDS:
+    while counter < ROUNDS_NUMBERS:
         if game_round(username):
             counter += 1
         else:
             break
 
-    if counter == ROUNDS:
+    if counter == ROUNDS_NUMBERS:
         print(f"Congratulations, {username}!")
