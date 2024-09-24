@@ -15,12 +15,13 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
     Returns:
         int: Результат выполнения операции.
     """
-    if operation == "+":
-        return number_one + number_two
-    elif operation == "-":
-        return number_one - number_two
-    elif operation == "*":
-        return number_one * number_two
+    match operation:
+        case "+":
+            return number_one + number_two
+        case "-":
+            return number_one - number_two
+        case "*":
+            return number_one * number_two
 
 
 def calc_round(username: str) -> bool:
@@ -35,8 +36,7 @@ def calc_round(username: str) -> bool:
     Returns:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
-    number_one = get_random_number()
-    number_two = get_random_number()
+    number_one, number_two = get_random_number()
     operation = random.choice(["+", "-", "*"])
     question = f"{number_one} {operation} {number_two}"
     correct_answer = str(calculate_result(number_one, number_two, operation))
