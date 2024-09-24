@@ -33,12 +33,9 @@ def gcd_round(username: str) -> bool:
     Returns:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
-    number_one = number_two = 1
-    while (
-        number_one == 1 or number_two == 1 or gcd(number_one, number_two) == 1
-    ):
-        number_one = get_random_number()
-        number_two = get_random_number()
+    number_one, number_two = get_random_number(), get_random_number()
+    if number_one == 1 or number_two == 1 or gcd(number_one, number_two) == 1:
+        return gcd_round(username)
     question = f"{number_one} {number_two}"
     correct_answer = str(gcd(number_one, number_two))
     return ask_question(question, correct_answer, username)
