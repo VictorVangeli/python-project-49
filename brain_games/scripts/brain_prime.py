@@ -1,10 +1,8 @@
-from brain_games.const import PRIME_RULES
-from brain_games.games.engine import play_game
-from brain_games.games.prime import prime_round
+from brain_games.games.prime import start_prime_game
 
 
 def main():
-    play_game(prime_round, PRIME_RULES)
+    start_prime_game()
 
 
 if __name__ == "__main__":

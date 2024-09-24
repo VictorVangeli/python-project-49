@@ -1,4 +1,9 @@
-from brain_games.games.engine import ask_question, get_random_number
+from brain_games.const import PRIME_RULES
+from brain_games.games.engine import ask_question, get_random_number, play_game
+
+
+def start_prime_game():
+    play_game(prime_round, PRIME_RULES)
 
 
 def is_prime(number: int) -> bool:
@@ -16,7 +21,7 @@ def is_prime(number: int) -> bool:
 
     if number < 2:
         return False
-    for i in range(2, int(number**0.5) + 1):
+    for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
             return False
     return True
