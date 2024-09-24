@@ -1,6 +1,11 @@
 import math
 
-from brain_games.games.engine import ask_question, get_random_number
+from brain_games.const import GCD_RULES
+from brain_games.games.engine import ask_question, get_random_number, play_game
+
+
+def start_gcd_game():
+    play_game(gcd_round, GCD_RULES)
 
 
 def gcd(a: int, b: int) -> int:

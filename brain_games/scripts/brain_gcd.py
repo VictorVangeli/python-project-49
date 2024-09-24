@@ -1,10 +1,8 @@
-from brain_games.const import GCD_RULES
-from brain_games.games.engine import play_game
-from brain_games.games.gcd import gcd_round
+from brain_games.games.gcd import start_gcd_game
 
 
 def main():
-    play_game(gcd_round, GCD_RULES)
+    start_gcd_game()
 
 
 if __name__ == "__main__":
