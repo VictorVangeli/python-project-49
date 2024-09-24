@@ -36,7 +36,7 @@ def calc_round(username: str) -> bool:
     Returns:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
-    number_one, number_two = get_random_number()
+    number_one, number_two = get_random_number(), get_random_number()
     operation = random.choice(["+", "-", "*"])
     question = f"{number_one} {operation} {number_two}"
     correct_answer = str(calculate_result(number_one, number_two, operation))

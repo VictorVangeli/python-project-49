@@ -1,3 +1,5 @@
+import math
+
 from brain_games.games.engine import ask_question, get_random_number
 
 
@@ -12,9 +14,7 @@ def gcd(a: int, b: int) -> int:
     Returns:
         int: наименьший общий делитель двух чисел.
     """
-    while b != 0:
-        a, b = b, a % b
-    return a
+    return math.gcd(a, b)
 
 
 def gcd_round(username: str) -> bool:
