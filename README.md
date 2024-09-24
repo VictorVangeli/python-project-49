@@ -4,7 +4,17 @@
 ### CodeClimate:
 [![Maintainability](https://api.codeclimate.com/v1/badges/05cb6ed980734667d5fb/maintainability)](https://codeclimate.com/github/VictorVangeli/python-project-49/maintainability)
 
-### ASCCIINEMA:
+### Стек технологий: 
+
+- **Язык программирования**: Python 3.10
+- **Пакетный менеджер**: Poetry
+- **Консольные утилиты**: Prompt
+- **Статический анализ кода**: flake8, black, isort
+- **Скрипты для управления проектом**: Makefile
+- **Система контроля версий**: Git
+
+
+### ASCIINEMA:
 
 #### FULL-DEMO:
 
