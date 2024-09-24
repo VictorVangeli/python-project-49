@@ -1,4 +1,4 @@
-from brain_games.games.games_logic import ask_question, get_random_number
+from brain_games.games.engine import ask_question, get_random_number
 
 
 def gcd(a: int, b: int) -> int:

@@ -1,6 +1,6 @@
 import random
 
-from brain_games.games.games_logic import ask_question, get_random_number
+from brain_games.games.engine import ask_question, get_random_number
 
 
 def calculate_result(number_one: int, number_two: int, operation: str) -> int:

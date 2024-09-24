@@ -1,6 +1,6 @@
 import random
 
-from brain_games.games.games_logic import ask_question
+from brain_games.games.engine import ask_question
 
 
 def progression_round(username: str) -> bool:
