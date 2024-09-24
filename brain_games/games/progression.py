@@ -1,6 +1,11 @@
 import random
 
-from brain_games.games.engine import ask_question
+from brain_games.const import PROGRESSION_RULES
+from brain_games.games.engine import ask_question, play_game
+
+
+def start_progression_game():
+    play_game(progression_round, PROGRESSION_RULES)
 
 
 def progression_round(username: str) -> bool:
