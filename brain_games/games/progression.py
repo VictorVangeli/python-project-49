@@ -21,9 +21,11 @@ def run_progression_round(username: str) -> bool:
 
     progression_list = [start + step * i for i in range(length)]
 
-    hide_elements = get_random_number(0, len(progression_list) - 1)
-    correct_answer = str(progression_list[hide_elements])
-    progression_list[hide_elements] = ".."
-    question = " ".join(map(str, progression_list))
+    hide_index = get_random_number(0, length - 1)
+    correct_answer = str(progression_list[hide_index])
+    question = " ".join(
+        ".." if i == hide_index else str(num)
+        for i, num in enumerate(progression_list)
+    )
 
     return ask_question(question, correct_answer, username)
