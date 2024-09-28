@@ -3,11 +3,7 @@ from brain_games.games.engine import ask_question, play_game
 from brain_games.utils import get_random_number
 
 
-def start_progression_game():
-    play_game(run_progression_round, PROGRESSION_RULES)
-
-
-def run_progression_round(username: str) -> bool:
+def get_progression_and_missed_number(username: str) -> bool:
     """
     Генерирует арифметическую прогрессию и скрывает один из ее элементов.
 
@@ -18,14 +14,17 @@ def run_progression_round(username: str) -> bool:
     start = get_random_number(1, 100)
     step = get_random_number(1, 40)
     length = get_random_number(5, 10)
-
-    progression_list = [start + step * i for i in range(length)]
-
     hide_index = get_random_number(0, length - 1)
-    correct_answer = str(progression_list[hide_index])
+
     question = " ".join(
-        ".." if i == hide_index else str(num)
-        for i, num in enumerate(progression_list)
+        ".." if i == hide_index else str(start + i * step)
+        for i in range(length)
     )
 
+    correct_answer = str(start + hide_index * step)
+
     return ask_question(question, correct_answer, username)
+
+
+def run_progression_game():
+    play_game(get_progression_and_missed_number, PROGRESSION_RULES)
