@@ -3,7 +3,7 @@ from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def get_progression_and_missed_number(username: str) -> tuple[str, str]:
+def get_progression_and_missed_number() -> tuple[str, str]:
     """
     Генерирует арифметическую прогрессию и скрывает один из ее элементов.
 
