@@ -5,10 +5,6 @@ from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def start_gcd_game():
-    play_game(run_gcd_round, GCD_RULES)
-
-
 def find_gcd(a: int, b: int) -> int:
     """
     Вычисляет наибольший общий делитель двух чисел
@@ -23,7 +19,7 @@ def find_gcd(a: int, b: int) -> int:
     return math.gcd(a, b)
 
 
-def run_gcd_round() -> tuple[str, str]:
+def get_number_and_gcd_status() -> tuple[str, str]:
     """
     Проводит один раунд игры на нахождение НОД двух случайных чисел.
 
@@ -33,8 +29,6 @@ def run_gcd_round() -> tuple[str, str]:
     Если игрок отвечает правильно, игра продолжается, если нет - игра
     завершается.
 
-    Args:
-        username (str): Имя пользователя
 
     Returns:
         tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
@@ -42,11 +36,15 @@ def run_gcd_round() -> tuple[str, str]:
     """
     number_one, number_two = get_random_number(), get_random_number()
     if (
-        number_one == 1
-        or number_two == 1
-        or find_gcd(number_one, number_two) == 1
+            number_one == 1
+            or number_two == 1
+            or find_gcd(number_one, number_two) == 1
     ):
-        return run_gcd_round()
+        return get_number_and_gcd_status()
     question = f"{number_one} {number_two}"
     correct_answer = str(find_gcd(number_one, number_two))
     return question, correct_answer
+
+
+def run_gcd_game():
+    play_game(get_number_and_gcd_status, GCD_RULES)

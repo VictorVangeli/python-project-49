@@ -33,11 +33,10 @@ def get_number_and_prime_status() -> tuple[str, str]:
     простое, и 'no', если не является простым. Если игрок отвечает правильно,
     раунд считается выигранным.
 
-    Args:
-        username (str): Имя пользователя
 
     Returns:
-        bool: True, если игрок дал правильный ответ, False в случае ошибки.
+        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
+                         ответ в виде строки.
     """
     number = get_random_number()
     question = str(number)

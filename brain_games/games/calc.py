@@ -5,11 +5,7 @@ from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def start_calc_game():
-    play_game(run_calc_round, CALC_RULES)
-
-
-def calculate_result(number_one: int, number_two: int, operation: str) -> int:
+def get_calculation__result(number_one: int, number_two: int, operation: str) -> int:
     """
     Вычисляет результат математической операции между двумя числами.
 
@@ -30,7 +26,7 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
             return number_one * number_two
 
 
-def run_calc_round() -> tuple[str, str]:
+def get_numbers_and_calculation_result() -> tuple[str, str]:
     """
     Игроку задается случайное арифметическое выражение, и он должен ввести
     правильный ответ.
@@ -44,5 +40,10 @@ def run_calc_round() -> tuple[str, str]:
     number_one, number_two = get_random_number(), get_random_number()
     operation = random.choice(["+", "-", "*"])
     question = f"{number_one} {operation} {number_two}"
-    correct_answer = str(calculate_result(number_one, number_two, operation))
+    correct_answer = str(
+        get_calculation__result(number_one, number_two, operation))
     return question, correct_answer
+
+
+def run_calc_game():
+    play_game(get_numbers_and_calculation_result, CALC_RULES)

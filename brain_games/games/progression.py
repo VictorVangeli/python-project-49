@@ -1,15 +1,15 @@
 from brain_games.const import PROGRESSION_RULES
-from brain_games.games.engine import ask_question, play_game
+from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def get_progression_and_missed_number(username: str) -> bool:
+def get_progression_and_missed_number(username: str) -> tuple[str, str]:
     """
     Генерирует арифметическую прогрессию и скрывает один из ее элементов.
 
     Returns:
-        tuple: Кортеж из строки с прогрессией (где один элемент заменен на '..')
-         и правильного ответа.
+        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
+                         ответ в виде строки.
     """
     start = get_random_number(1, 100)
     step = get_random_number(1, 40)
@@ -23,7 +23,7 @@ def get_progression_and_missed_number(username: str) -> bool:
 
     correct_answer = str(start + hide_index * step)
 
-    return ask_question(question, correct_answer, username)
+    return question, correct_answer
 
 
 def run_progression_game():

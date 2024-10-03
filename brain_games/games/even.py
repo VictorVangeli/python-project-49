@@ -16,7 +16,7 @@ def is_even(number: int) -> bool:
     return number % 2 == 0
 
 
-def run_even_round() -> tuple[str, str]:
+def get_number_and_even_status() -> tuple[str, str]:
     """
     Проводит один раунд игры, в котором игрок должен угадать, является ли число
     четным.
@@ -36,5 +36,5 @@ def run_even_round() -> tuple[str, str]:
     return question, correct_answer
 
 
-def start_even_game():
-    play_game(run_even_round, EVEN_RULES)
+def run_even_game():
+    play_game(get_number_and_even_status, EVEN_RULES)
