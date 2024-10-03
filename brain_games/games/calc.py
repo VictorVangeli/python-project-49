@@ -1,7 +1,7 @@
 import random
 
 from brain_games.const import CALC_RULES
-from brain_games.games.engine import ask_question, play_game
+from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
@@ -30,20 +30,19 @@ def calculate_result(number_one: int, number_two: int, operation: str) -> int:
             return number_one * number_two
 
 
-def run_calc_round(username: str) -> bool:
+def run_calc_round() -> tuple[str, str]:
     """
     Игроку задается случайное арифметическое выражение, и он должен ввести
     правильный ответ.
     Если ответ верный, раунд засчитывается как выигранный.
 
-    Args:
-        username (str): Имя пользователя
 
     Returns:
-        bool: True, если игрок дал правильный ответ, False в случае ошибки.
+        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
+                         ответ в виде строки.
     """
     number_one, number_two = get_random_number(), get_random_number()
     operation = random.choice(["+", "-", "*"])
     question = f"{number_one} {operation} {number_two}"
     correct_answer = str(calculate_result(number_one, number_two, operation))
-    return ask_question(question, correct_answer, username)
+    return question, correct_answer
