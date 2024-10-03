@@ -5,25 +5,22 @@ from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def get_calculation__result(number_one: int, number_two: int, operation: str) -> int:
+def get_random_math_sign_and_result(number_one: int,
+                                    number_two: int,
+                                    operation: int) -> int:
     """
     Вычисляет результат математической операции между двумя числами.
 
     Args:
         number_one (int): Первое число.
         number_two (int): Второе число.
-        operation (str): Операция, которую нужно выполнить ('+', '-', '*').
+        operation (int): Операция, которую нужно выполнить ('+', '-', '*').
 
     Returns:
         int: Результат выполнения операции.
     """
-    match operation:
-        case "+":
-            return number_one + number_two
-        case "-":
-            return number_one - number_two
-        case "*":
-            return number_one * number_two
+    result = eval(f"{number_one} {operation} {number_two}")
+    return result
 
 
 def get_numbers_and_calculation_result() -> tuple[str, str]:
@@ -41,7 +38,7 @@ def get_numbers_and_calculation_result() -> tuple[str, str]:
     operation = random.choice(["+", "-", "*"])
     question = f"{number_one} {operation} {number_two}"
     correct_answer = str(
-        get_calculation__result(number_one, number_two, operation))
+        get_random_math_sign_and_result(number_one, number_two, operation))
     return question, correct_answer
 
 
