@@ -1,10 +1,6 @@
 from brain_games.const import PRIME_RULES
-from brain_games.games.engine import ask_question, play_game
+from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
-
-
-def start_prime_game():
-    play_game(run_prime_round, PRIME_RULES)
 
 
 def is_prime(number: int) -> bool:
@@ -28,7 +24,7 @@ def is_prime(number: int) -> bool:
     return True
 
 
-def run_prime_round(username: str) -> bool:
+def get_number_and_prime_status() -> tuple[str, str]:
     """
     Проводит один раунд игры, в котором игрок должен угадать, является ли число
     простым.
@@ -44,5 +40,10 @@ def run_prime_round(username: str) -> bool:
         bool: True, если игрок дал правильный ответ, False в случае ошибки.
     """
     number = get_random_number()
+    question = str(number)
     correct_answer = "yes" if is_prime(number) else "no"
-    return ask_question(f"{number}", correct_answer, username)
+    return question, correct_answer
+
+
+def run_prime_game():
+    play_game(get_number_and_prime_status, PRIME_RULES)
