@@ -1,4 +1,4 @@
-import random
+from random import randint
 
 
 def get_random_number(start=1, end=100) -> int:
@@ -11,4 +11,4 @@ def get_random_number(start=1, end=100) -> int:
     Returns:
         int: Случайное число
     """
-    return random.randint(start, end)
+    return randint(start, end)
