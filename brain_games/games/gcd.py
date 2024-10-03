@@ -1,7 +1,7 @@
 import math
 
 from brain_games.const import GCD_RULES
-from brain_games.games.engine import ask_question, play_game
+from brain_games.games.engine import play_game
 from brain_games.utils import get_random_number
 
 
@@ -23,7 +23,7 @@ def find_gcd(a: int, b: int) -> int:
     return math.gcd(a, b)
 
 
-def run_gcd_round(username: str) -> bool:
+def run_gcd_round() -> tuple[str, str]:
     """
     Проводит один раунд игры на нахождение НОД двух случайных чисел.
 
@@ -37,7 +37,8 @@ def run_gcd_round(username: str) -> bool:
         username (str): Имя пользователя
 
     Returns:
-        bool: True, если игрок дал правильный ответ, False в случае ошибки.
+        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
+                         ответ в виде строки.
     """
     number_one, number_two = get_random_number(), get_random_number()
     if (
@@ -45,7 +46,7 @@ def run_gcd_round(username: str) -> bool:
         or number_two == 1
         or find_gcd(number_one, number_two) == 1
     ):
-        return run_gcd_round(username)
+        return run_gcd_round()
     question = f"{number_one} {number_two}"
     correct_answer = str(find_gcd(number_one, number_two))
-    return ask_question(question, correct_answer, username)
+    return question, correct_answer
