@@ -5,11 +5,11 @@ from brain_games.utils import get_random_number
 
 def get_progression_and_missed_number() -> tuple[str, str]:
     """
-    Генерирует арифметическую прогрессию и скрывает один из ее элементов.
+    Generates an arithmetic progression and hides one of its elements
 
     Returns:
-        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
-                         ответ в виде строки.
+        tuple[str, str]: A tuple containing a question as a string and the
+        correct answer as a string
     """
     start = get_random_number(1, 100)
     step = get_random_number(1, 40)

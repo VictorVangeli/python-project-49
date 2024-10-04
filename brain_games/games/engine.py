@@ -3,12 +3,13 @@ from brain_games.const import ENTER_NAME, GREETING_MESSAGE, ROUNDS_NUMBERS
 
 def play_game(game_round, game_rules: str):
     """
-    Логика игры, которая повторяет вопросы, пока пользователь не ответит
-    правильно несколько раз подряд.
+    The logic of the game, which repeats the questions until the user answers
+    correctly several times in a row
 
     Args:
-        game_round (Callable): Функция, которая описывает один раунд игры.
-        game_rules (str): Правила игры, которые будут выведены перед началом.
+        game_round (Callable): A function that describes one round of the game.
+        game_rules (str): The rules of the game that will be displayed before
+        the start
     """
     print(GREETING_MESSAGE)
     username = input(ENTER_NAME)

@@ -5,15 +5,15 @@ from brain_games.utils import get_random_number
 
 def is_prime(number: int) -> bool:
     """
-    Проверяет, является ли число простым.
-    Если число делится на какое-либо число больше своего квадратного корня, то
-    другой делитель обязательно будет меньше квадратного корня
+    Checks if the number is prime.
+    If a number is divided by any number greater than its square root, then
+    the other divisor will necessarily be less than the square root
 
     Args:
-        number (int): Целое число для проверки.
+        number (int): An integer to check
 
     Returns:
-        bool: True, если число простое, иначе False.
+        bool: True if number is prime, else False.
     """
 
     if number < 2:
@@ -26,17 +26,17 @@ def is_prime(number: int) -> bool:
 
 def get_number_and_prime_status() -> tuple[str, str]:
     """
-    Проводит один раунд игры, в котором игрок должен угадать, является ли число
-    простым.
+    Conducts one round of the game in which the player must guess whether the
+    number is simple
 
-    Игроку задается случайное число, и он должен ответить 'yes', если число
-    простое, и 'no', если не является простым. Если игрок отвечает правильно,
-    раунд считается выигранным.
+    The player is given a random number and must answer 'yes' if the number
+    simple, and 'no' if it is not simple. If the player answers correctly,
+    the round is considered won
 
 
     Returns:
-        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
-                         ответ в виде строки.
+        tuple[str, str]: A tuple containing a question in the form of a string
+        and the correct answer in the form of a string
     """
     number = get_random_number()
     question = str(number)

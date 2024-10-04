@@ -9,30 +9,30 @@ def get_random_math_sign_and_result(number_one: int,
                                     number_two: int,
                                     operation: int) -> int:
     """
-    Вычисляет результат математической операции между двумя числами.
+    Calculates the result of a mathematical operation between two numbers.
 
-    Args:
-        number_one (int): Первое число.
-        number_two (int): Второе число.
-        operation (int): Операция, которую нужно выполнить ('+', '-', '*').
+     Args:
+        number_one (int): The first number
+        number_two (int): The second number
+        operation (int): The operation to be performed ('+', '-', '*')
 
-    Returns:
-        int: Результат выполнения операции.
-    """
+     Returns:
+        int: The result of the operation.
+     """
     result = eval(f"{number_one} {operation} {number_two}")
     return result
 
 
 def get_numbers_and_calculation_result() -> tuple[str, str]:
     """
-    Игроку задается случайное арифметическое выражение, и он должен ввести
-    правильный ответ.
-    Если ответ верный, раунд засчитывается как выигранный.
+    The player is given a random arithmetic expression and must enter
+    the correct answer
+    If the answer is correct, the round is counted as won
 
 
     Returns:
-        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
-                         ответ в виде строки.
+        tuple[str, str]: A tuple containing a question in the form of a string
+        and the correct answer in the form of a string
     """
     number_one, number_two = get_random_number(), get_random_number()
     operation = random.choice(["+", "-", "*"])

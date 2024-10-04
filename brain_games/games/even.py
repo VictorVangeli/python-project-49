@@ -5,30 +5,30 @@ from brain_games.utils import get_random_number
 
 def is_even(number: int) -> bool:
     """
-    Проверяет, является ли число четным.
+    Checks if the number is even
 
     Args:
-        number (int): Целое число для проверки.
+        number (int): An integer to check
 
     Returns:
-        bool: True, если число четное, иначе False.
+        bool: True if the number is even, otherwise False
     """
     return number % 2 == 0
 
 
 def get_number_and_even_status() -> tuple[str, str]:
     """
-    Проводит один раунд игры, в котором игрок должен угадать, является ли число
-    четным.
+    Conducts one round of the game in which the player must guess whether the
+    number is even
 
-    Игроку задается случайное число, и он должен ответить 'yes', если число
-    четное, и 'no', если нечетное. Если игрок отвечает правильно, раунд
-    считается выигранным.
+     The player is given a random number, and he must answer 'yes' if the number
+    is even, and 'no' if it is odd. If the player answers correctly, the round
+    is considered won
 
 
     Returns:
-        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
-                         ответ в виде строки.
+        tuple[str, str]: A tuple containing a question as a string and the
+        correct answer as a string
     """
     number = get_random_number()
     question = str(number)

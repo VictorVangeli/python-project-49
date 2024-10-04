@@ -7,32 +7,33 @@ from brain_games.utils import get_random_number
 
 def find_gcd(a: int, b: int) -> int:
     """
-    Вычисляет наибольший общий делитель двух чисел
+    Calculates the largest common divisor of two numbers
 
     Args:
-        a (int): Первое число.
-        b (int): Второе число.
+        a (int): First number
+        b (int): Second number
 
     Returns:
-        int: Наибольший общий делитель двух чисел.
+        int: The largest common divisor of two numbers
     """
     return math.gcd(a, b)
 
 
 def get_number_and_gcd_status() -> tuple[str, str]:
     """
-    Проводит один раунд игры на нахождение НОД двух случайных чисел.
+    Conducts one round of the game to find the largest common divisor of two
+    random numbers
 
-    Игроку предлагается найти наибольший общий делитель двух случайных чисел,
-    которые не равны 1, и наименьший общий делитель которых не равен 1.
+    The player is asked to find the largest common divisor of two random numbers
+    that are not equal to 1, and the smallest common divisor of which is not
+    equal to 1
 
-    Если игрок отвечает правильно, игра продолжается, если нет - игра
-    завершается.
+     If the player answers correctly, the game continues, if not, the game ends
 
 
     Returns:
-        tuple[str, str]: Кортеж, содержащий вопрос в виде строки и правильный
-                         ответ в виде строки.
+        tuple[str, str]: A tuple containing a question as a string and the
+        correct answer as a string
     """
     number_one, number_two = get_random_number(), get_random_number()
     question = f"{number_one} {number_two}"
