@@ -35,12 +35,6 @@ def get_number_and_gcd_status() -> tuple[str, str]:
                          ответ в виде строки.
     """
     number_one, number_two = get_random_number(), get_random_number()
-    if (
-            number_one == 1
-            or number_two == 1
-            or find_gcd(number_one, number_two) == 1
-    ):
-        return get_number_and_gcd_status()
     question = f"{number_one} {number_two}"
     correct_answer = str(find_gcd(number_one, number_two))
     return question, correct_answer
