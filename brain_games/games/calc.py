@@ -1,7 +1,7 @@
 import random
 
 from brain_games.const import CALC_RULES
-from brain_games.games.engine import play_game
+from brain_games.engine import play_game
 from brain_games.utils import get_random_number
 
 
