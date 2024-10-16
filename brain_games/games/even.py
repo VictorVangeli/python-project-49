@@ -30,10 +30,9 @@ def get_number_and_even_status() -> tuple[str, str]:
         tuple[str, str]: A tuple containing a question as a string and the
         correct answer as a string
     """
-    number = get_random_number()
-    question = str(number)
-    correct_answer = "yes" if is_even(number) else "no"
-    return question, correct_answer
+    question = (get_random_number())
+    correct_answer = "yes" if is_even(question) else "no"
+    return str(question), correct_answer
 
 
 def run_even_game():
