@@ -5,20 +5,6 @@ from brain_games.engine import play_game
 from brain_games.utils import get_random_number
 
 
-def find_gcd(a: int, b: int) -> int:
-    """
-    Calculates the largest common divisor of two numbers
-
-    Args:
-        a (int): First number
-        b (int): Second number
-
-    Returns:
-        int: The largest common divisor of two numbers
-    """
-    return math.gcd(a, b)
-
-
 def get_number_and_gcd_status() -> tuple[str, str]:
     """
     Conducts one round of the game to find the largest common divisor of two
@@ -37,7 +23,7 @@ def get_number_and_gcd_status() -> tuple[str, str]:
     """
     number_one, number_two = get_random_number(), get_random_number()
     question = f"{number_one} {number_two}"
-    correct_answer = str(find_gcd(number_one, number_two))
+    correct_answer = str(math.gcd(number_one, number_two))
     return question, correct_answer
 
 
